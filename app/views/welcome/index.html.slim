@@ -1,0 +1,161 @@
+doctype html
+html.no-js lang="zxx"
+  head
+    meta charset="utf-8"
+    meta http-equiv="x-ua-compatible" content="ie=edge"
+    title Musico
+    meta name="description" content=""
+    meta name="viewport" content="width=device-width, initial-scale=1"
+
+    link rel="shortcut icon" type="image/x-icon" href="img/favicon.png"
+
+    / CSS
+    link rel="stylesheet" href="css/bootstrap.min.css"
+    link rel="stylesheet" href="css/owl.carousel.min.css"
+    link rel="stylesheet" href="css/magnific-popup.css"
+    link rel="stylesheet" href="css/font-awesome.min.css"
+    link rel="stylesheet" href="css/themify-icons.css"
+    link rel="stylesheet" href="css/nice-select.css"
+    link rel="stylesheet" href="css/audioplayer.css"
+    link rel="stylesheet" href="css/flaticon.css"
+    link rel="stylesheet" href="css/gijgo.css"
+    link rel="stylesheet" href="css/animate.css"
+    link rel="stylesheet" href="css/slick.css"
+    link rel="stylesheet" href="css/slicknav.css"
+    link rel="stylesheet" href="css/style.css"
+
+  body
+    / Header
+    header
+      .header-area
+        #sticky-header.main-header-area
+          .container-fluid
+            .header_bottom_border
+              .row.align-items-center
+                .col-xl-3.col-lg-2
+                  .logo
+                    = link_to "index.html" do
+                      img src="img/logo.png" alt=""
+
+                .col-xl-6.col-lg-7
+                  .main-menu.d-none.d-lg-block
+                    nav
+                      ul#navigation
+                        li
+                          a.active href="index.html" home
+                        li
+                          a href="about.html" About
+                        li
+                          a href="track.html" tracks
+                        li
+                          a href="#"
+                            | blog
+                            i.ti-angle-down
+                          ul.submenu
+                            li = link_to "blog", "blog.html"
+                            li = link_to "single-blog", "single-blog.html"
+                        li
+                          a href="#"
+                            | pages
+                            i.ti-angle-down
+                          ul.submenu
+                            li = link_to "elements", "elements.html"
+                        li
+                          a href="contact.html" Contact
+
+                .col-xl-3.col-lg-3.d-none.d-lg-block
+                  .social_icon.text-right
+                    ul
+                      li = link_to "#" do
+                        i.fa.fa-facebook
+                      li = link_to "#" do
+                        i.fa.fa-twitter
+                      li = link_to "#" do
+                        i.fa.fa-instagram
+
+                .col-12
+                  .mobile_menu.d-block.d-lg-none
+
+    / Slider
+    .slider_area
+      .single_slider.d-flex.align-items-center.overlay2 style="background-image: url(#{asset_path('banner/banner.png')})"
+        .container
+          .row
+            .col-xl-12
+              .slider_text.text-center
+                h3 Musician
+
+    / Music Area
+    .music_area
+      .container
+        .row.align-items-center.justify-content-center
+          .col-xl-10
+            .row.align-items-center
+              .col-xl-9.col-md-9
+                .music_field
+                  .thumb
+                    = image_tag "music_man/1.png", alt: "Music Artist", class: "img-fluid"
+
+                  .audio_name
+                    .name
+                      h4 Frando Kally
+                      p 10 November, 2019
+
+                    audio preload="auto" controls
+                      source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg"
+
+              .col-xl-3.col-md-3
+                .music_btn
+                  = link_to "Buy Album", "#", class: "boxed-btn"
+
+
+    / About
+    .about_area
+      .container
+        .row.align-items-center
+          .col-xl-5.col-md-6
+            .about_thumb
+              = image_tag "about/about_1.png", class: "img-fluid", alt: "About image"
+
+          .col-xl-7.col-md-6
+            .about_info
+              h3 Vincent Jerald
+              p
+                | Esteem spirit temper too say adieus who direct esteem...
+              .signature
+                = image_tag "about/signature.png", alt: "Signature"
+
+    / Footer
+    footer.footer
+      .footer_top
+        .container
+          .row
+            .col-xl-6.col-md-6
+              .footer_widget
+                h3.footer_title Services
+                .subscribe-from
+                  form
+                    input type="text" placeholder="Enter your mail"
+                    button type="submit" Subscribe
+                p.sub_text
+                  | Esteem spirit temper too say adieus who direct esteem.
+
+            .col-xl-5.col-md-5.offset-xl-1
+              .footer_widget
+                h3.footer_title Contact Me
+                ul
+                  li = link_to "conbusi@support.com", "#"
+                  li = link_to "+10 873 672 6782", "#"
+                  li = link_to "600/D, Green road, NewYork", "#"
+
+    / JS
+    script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    script src="js/bootstrap.min.js"
+    script src="js/owl.carousel.min.js"
+    script src="js/jquery.magnific-popup.min.js"
+    script src="js/main.js"
+
+    javascript:
+      $(function () {
+        $('audio').audioPlayer({});
+      })

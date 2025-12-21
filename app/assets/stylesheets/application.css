@@ -8,3 +8,29 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+/*
+ * app/assets/stylesheets/application.css
+ *
+ * NOTE: Do NOT include the .css extension in the require directive.
+ * The order is important: framework first, then dependencies, then plugins.
+ */
+
+/* Framework */
+*= require bootstrap.min
+
+/* Icons and Fonts (CRUCIAL: See Step 2) */
+*= require font-awesome.min
+*= require flaticon
+
+/* Animations, Plugins, and Utilities */
+*= require animate
+*= require audioplayer
+*= require gijgo
+*= require magnific-popup
+*= require nice-select
+*= require owl.carousel.min
+*= require slick
+
+/* Default Rails Directives */
+*= require_tree .
+*= require_self
